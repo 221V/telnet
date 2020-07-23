@@ -1,6 +1,10 @@
 -module(ac_telnet).
--compile(export_all).
+-compile([export_all, nowarn_export_all]).
 -export([connect/6,get_prompt_regexp/0]).
+
+% todo :
+% move io:format to MACRO
+% move MACRO to hrl file
 
 -define(username,"Username:").
 -define(password,"Password:").

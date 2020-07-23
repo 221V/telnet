@@ -1,4 +1,3 @@
-%%
 %% %CopyrightBegin%
 %%
 %% Copyright Ericsson AB 2003-2010. All Rights Reserved.
@@ -35,7 +34,8 @@
 -export([open/1, open/2, open/3, open/4, close/1]).
 -export([send_data/2, get_data/1]).
 
--include_lib("elog/include/elog.hrl").
+-define(INFO(X, Y), io:format(X, Y)).
+-define(ERROR(X, Y), io:format("ERROR! " ++ X, Y)).
 
 -define(TELNET_PORT, 23).
 -define(OPEN_TIMEOUT,10000).

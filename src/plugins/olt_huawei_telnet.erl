@@ -8,7 +8,9 @@
 
 -export([backup_data/1, backup_file/1]).
 
--include_lib("elog/include/elog.hrl").
+-define(INFO(X, Y), io:format(X, Y)).
+-define(ERROR(X, Y), io:format("ERROR! " ++ X, Y)).
+-define(WARNING(X, Y), io:format("WARNING! " ++ X, Y)).
 
 -define(CMD_TIMEOUT, 9000).
 

@@ -1,9 +1,8 @@
-
 -module(telnet).
 
 -update("hejin 2013-1-9").
 
--compile(export_all).
+-compile([export_all, nowarn_export_all]).
 
 -export([open/4, cmd/2, cmd/3, cmd/4,
         send/2, close/1]).
@@ -14,7 +13,9 @@
 %% Tool internals
 -export([silent_teln_expect/5, teln_receive_until_prompt/3, teln_cmd/4]).
 
--include_lib("elog/include/elog.hrl").
+
+-define(INFO(X, Y), io:format(X, Y)).
+-define(ERROR(X, Y), io:format("ERROR! " ++ X, Y)).
 
 -define(DEFAULT_PORT,23).
 -define(DEFAULT_TIMEOUT,10000).
