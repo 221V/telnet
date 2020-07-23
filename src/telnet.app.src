@@ -2,7 +2,7 @@
  [
   {description, "telnet"},
   {vsn, "1.0"},
-  {registered, [telent]},
+  {registered, [telnet]},
   {applications, []},
   {mod, {}},
   {env, []}
